@@ -2,8 +2,8 @@
 
 ## Objective
 
-- The objective of this Senior Research is to uncover how senior Computer Science students at ECSU perceive the impact of Artificial Intelligence.
+- The objective of this Senior Research is to uncover the current perceived impact of Artificial Intelligence as well as how it relates to past experiences.
 
 ## Methodology
 
-- Students will complete a survey to assess their existing knowledge and their perceptions of AI.
+- Respondants will complete a survey that will be used to assess their existing knowledge and perceptions of AI.
