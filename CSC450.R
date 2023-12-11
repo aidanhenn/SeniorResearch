@@ -46,7 +46,6 @@ summary(surveyData)
 
 # Comparing Familiarity to Optimism
 correlation <- cor(surveyData$FAMILIARITY, surveyData$OPTIMISM)
-r_squared <- correlation^2
 
 ggplot(surveyData, aes(x = FAMILIARITY, y = OPTIMISM)) +
   geom_point(color = "steelblue", size = 3, shape = 16) +
@@ -57,7 +56,7 @@ ggplot(surveyData, aes(x = FAMILIARITY, y = OPTIMISM)) +
   theme_minimal() +
   labs(
     title = "Individuals Optimism about AI based on their Familiarity",
-    subtitle = paste("R squared =", round(r_squared, 3)),
+    subtitle = paste("r =", round(correlation, 3)),
     x = "Familiarity (1-10)",
     y = "Optimism (1-10)"
   ) +
@@ -73,7 +72,6 @@ ggplot(surveyData, aes(x = FAMILIARITY, y = OPTIMISM)) +
 
 ### Familiarity and Concern
 correlation <- cor(surveyData$FAMILIARITY, surveyData$CONCERN)
-r_squared <- correlation^2
 
 ggplot(surveyData, aes(x = FAMILIARITY, y = CONCERN)) +
   geom_point(color = "steelblue", size = 3, shape = 16) +
@@ -83,7 +81,7 @@ ggplot(surveyData, aes(x = FAMILIARITY, y = CONCERN)) +
   theme_minimal() +
   labs(
     title = "Individuals Concern about AI based on their Familiarity",
-    subtitle = paste("R squared =", round(r_squared, 3)),
+    subtitle = paste("r =", round(correlation, 3)),
     x = "Familiarity (1-10)",
     y = "Concern (1-10)"
   ) +
@@ -99,7 +97,6 @@ ggplot(surveyData, aes(x = FAMILIARITY, y = CONCERN)) +
 
 ##### work years and concern
 correlation <- cor(surveyData$WORK_YRS, surveyData$CONCERN)
-r_squared <- correlation^2
 
 ggplot(surveyData, aes(x = jitter(WORK_YRS), y = CONCERN)) +
   geom_point(color = "steelblue", size = 3, alpha = 0.7) +
@@ -108,7 +105,7 @@ ggplot(surveyData, aes(x = jitter(WORK_YRS), y = CONCERN)) +
   geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed", size = 1.5) +
 
   labs(title = "Concern vs Work Years",
-       subtitle = paste("R squared =", round(r_squared, 3)),
+       subtitle = paste("r =", round(correlation, 3)),
        x = "Work Years",
        y = "Concern") +
 
@@ -124,7 +121,6 @@ ggplot(surveyData, aes(x = jitter(WORK_YRS), y = CONCERN)) +
 ### Work years and complex probs
 
 correlation <- cor(surveyData$WORK_YRS, surveyData$COMPLEX_PROBS)
-r_squared <- correlation^2
 
 ggplot(surveyData, aes(x = jitter(WORK_YRS), y = COMPLEX_PROBS)) +
   geom_point(color = "steelblue", size = 3, shape = 16) +
@@ -134,7 +130,7 @@ ggplot(surveyData, aes(x = jitter(WORK_YRS), y = COMPLEX_PROBS)) +
 
   labs(
     title = "Confidence in AI Solving Complex Problems based on YOE",
-    subtitle = paste("R squared =", round(r_squared, 3)),
+    subtitle = paste("r =", round(correlation, 3)),
     x = "Year of Industry Experience",
     y = "Confidence in Solving Complex Problems"
   ) +
